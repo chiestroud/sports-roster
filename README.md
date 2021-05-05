@@ -1,7 +1,9 @@
-# React Template
+# Sports Roster
 
-**Use this template to get up and running quickly on projects.**
+You can make your favorite basball team using Sports Roster.
+Please login and add your favorite people/animal to your favorite sports team.
 
-This is just like the webpack template. Use it, create the repo, connect it to your local and `npm i`.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/99ee2be4-5b38-4656-a080-c0b9a87edd5d/deploy-status)](https://app.netlify.com/sites/compassionate-curran-e86617/deploys)
 
-- [Steps to deploy](https://github.com/nss-nightclass-projects/REACT-Deployment-Netlify)
+Deployed site:
+https://cs-sports-roster.netlify.app/
