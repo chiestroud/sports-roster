@@ -11,12 +11,13 @@ const PlayerCard = ({
   imageUrl,
   position,
   uid,
-  setPlayer
+  setPlayer,
+  user
 }) => {
   const [editing, setEditing] = useState(false);
   const handleClick = (type) => {
     if (type === 'delete') {
-      deletePlayer(firebaseKey).then((playerArray) => setPlayer(playerArray));
+      deletePlayer(firebaseKey, user).then((playerArray) => setPlayer(playerArray));
     } else if (type === 'edit') {
       setEditing((prevState) => !prevState);
     }
@@ -44,7 +45,8 @@ PlayerCard.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   uid: PropTypes.string.isRequired,
-  setPlayer: PropTypes.func
+  setPlayer: PropTypes.func,
+  user: PropTypes.any
 };
 
 export default PlayerCard;
