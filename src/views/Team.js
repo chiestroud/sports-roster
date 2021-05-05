@@ -28,6 +28,7 @@ export default function Team({ user, player, setPlayer }) {
           uid={playerInfo.uid}
           imageUrl={playerInfo.imageUrl}
           setPlayer={setPlayer}
+          user={user}
         />
       ))}
     </section>

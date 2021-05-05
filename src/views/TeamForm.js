@@ -23,7 +23,7 @@ export default function TeamForm({ user, setPlayer }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addPlayer(newPlayer).then((playerArray) => setPlayer(playerArray));
+    addPlayer(newPlayer, user).then((playerArray) => setPlayer(playerArray));
   };
 
   return (
