@@ -20,6 +20,7 @@ export default function Team({ user, player, setPlayer }) {
           <TeamForm setPlayer={setPlayer} user={user}/>
         </div>
       }
+      <div className='container'>
       {player.map((playerInfo) => (
         <PlayerCard key={playerInfo.firebaseKey}
           firebaseKey={playerInfo.firebaseKey}
@@ -31,6 +32,7 @@ export default function Team({ user, player, setPlayer }) {
           user={user}
         />
       ))}
+      </div>
     </section>
   );
 }

@@ -4,3 +4,13 @@
 body {
   background-color: $favColor;
 }
+
+div.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#playerImg {
+  width: 200px;
+  border-radius: 50% 50%;
+}
