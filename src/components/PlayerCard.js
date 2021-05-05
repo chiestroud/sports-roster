@@ -4,6 +4,7 @@ import {
   Card, CardBody, CardImg, CardText, Button, CardTitle
 } from 'reactstrap';
 import { deletePlayer } from '../helpers/data/playerData';
+import TeamForm from '../views/TeamForm';
 
 const PlayerCard = ({
   firebaseKey,
@@ -24,14 +25,23 @@ const PlayerCard = ({
   };
 
   return (
-    <div>
+    <div className='container'>
       <Card body className='card' key={firebaseKey} id={uid}>
-        <CardImg top width="100%" src={imageUrl} alt="Card image cap" />
+        <CardImg id='playerImg' src={imageUrl} alt="Card image cap" />
         <CardBody>
           <CardTitle tag="h5">{name}</CardTitle>
           <CardText>Position: {position}</CardText>
           <Button color='info' onClick={() => handleClick('edit')}>
             {editing ? 'Close Form' : 'Update Player'}</Button>
+          {editing && <TeamForm
+            setPlayer={setPlayer}
+            user={user}
+            firebaseKey={firebaseKey}
+            name={name}
+            imageUrl={imageUrl}
+            position={position}
+            uid={uid}
+          />}
           <Button color='danger' onClick={() => handleClick('delete')}>Delete Player</Button>
         </CardBody>
       </Card>
