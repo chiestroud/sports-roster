@@ -25,9 +25,8 @@ const PlayerCard = ({
   };
 
   return (
-    <div className='container'>
-      <Card body className='card' key={firebaseKey} id={uid}>
-        <CardImg id='playerImg' src={imageUrl} alt="Card image cap" />
+      <Card body className='card m-1 text-center' key={firebaseKey} id={uid}>
+        <CardImg className='mx-auto d-block' id='playerImg' src={imageUrl} alt="Card image cap" />
         <CardBody>
           <CardTitle tag="h5">{name}</CardTitle>
           <CardText>Position: {position}</CardText>
@@ -42,10 +41,9 @@ const PlayerCard = ({
             position={position}
             uid={uid}
           />}
-          <Button color='danger' onClick={() => handleClick('delete')}>Delete Player</Button>
+          <Button color='danger' className='m-1' onClick={() => handleClick('delete')}>Delete Player</Button>
         </CardBody>
       </Card>
-    </div>
   );
 };
 

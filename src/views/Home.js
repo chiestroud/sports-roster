@@ -5,9 +5,12 @@ export default function Home({ user }) {
   return (
     <div>
     { user
-        && <section>
-        <header>Welcome, {user.fullName}</header>
+      ? <section className='header'>
+        <header className='h1'>Welcome, {user.fullName}</header>
         <img className='profileImage' src={user.profileImage} />
+        </section>
+      : <section className='header'>
+          <header className='h1'>Please Login to Continue</header>
         </section>
       }
    </div>

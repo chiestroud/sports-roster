@@ -5,12 +5,28 @@ body {
   background-color: $favColor;
 }
 
-div.container {
+div.playerContainer {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #playerImg {
   width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 50% 50%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+}
+
+.profileImage {
+  border-radius: 50%;
+  object-fit: fill;
 }

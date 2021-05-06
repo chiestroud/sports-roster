@@ -11,29 +11,33 @@ export default function Team({ user, player, setPlayer }) {
   };
 
   return (
-    <section>
-      <header>This is Team page</header>
+    <main>
+      <section className="header">
+      <header className="h1">{user.fullName}&apos;s Team page</header>
       { !showButton
         ? <Button color='info' onClick={handleClick}>Add Player</Button>
         : <div>
         <Button color='info' onClick={handleClick}>Are you done yet?</Button>
           <TeamForm setPlayer={setPlayer} user={user}/>
         </div>
-      }
-      <div className='container'>
-      {player.map((playerInfo) => (
-        <PlayerCard key={playerInfo.firebaseKey}
-          firebaseKey={playerInfo.firebaseKey}
-          name={playerInfo.name}
-          position={playerInfo.position}
-          uid={playerInfo.uid}
-          imageUrl={playerInfo.imageUrl}
-          setPlayer={setPlayer}
-          user={user}
-        />
-      ))}
-      </div>
-    </section>
+        }
+      </section>
+      <section className="container">
+        <div className='playerContainer'>
+        {player.map((playerInfo) => (
+          <PlayerCard key={playerInfo.firebaseKey}
+            firebaseKey={playerInfo.firebaseKey}
+            name={playerInfo.name}
+            position={playerInfo.position}
+            uid={playerInfo.uid}
+            imageUrl={playerInfo.imageUrl}
+            setPlayer={setPlayer}
+            user={user}
+          />
+        ))}
+        </div>
+      </section>
+    </main>
   );
 }
 
