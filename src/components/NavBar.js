@@ -20,13 +20,13 @@ const NavBar = ({ user }) => {
   const authenticated = () => (
     <>
       <Link className='navbar-brand' to="/">Home</Link>
-      <NavbarToggler onClick={toggle} />
+      <NavbarToggler className='m-1' onClick={toggle} />
       <Collapse isOpen={isOpen} navbar>
         <Nav className="mr-auto" navbar>
-          <NavItem>
+          <NavItem className='m-1'>
             <Link className='nav-link' to="/team">Team</Link>
           </NavItem>
-            <Button color='danger' onClick={signOutUser}>Log Out</Button>
+            <Button className='m-1' color='danger' onClick={signOutUser}>Log Out</Button>
         </Nav>
         <NavbarText>Welcome</NavbarText>
       </Collapse>
@@ -37,7 +37,7 @@ const NavBar = ({ user }) => {
     <div>
       <Navbar color="light" light expand="md">
         {user && authenticated()}
-        {!user && <Button color='info' onClick={signInUser}>Sign In</Button>}
+        {!user && <Button color='info' onClick={signInUser}>Sign In with Google</Button>}
       </Navbar>
     </div>
   );
