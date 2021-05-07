@@ -28,10 +28,6 @@ function App() {
     });
   }, []);
 
-  // useEffect(() => {
-  //   ;
-  // }, []);
-
   return (
     <Router>
       <NavBar user={user}/>

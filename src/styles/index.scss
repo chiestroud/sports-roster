@@ -2,7 +2,16 @@
 @import 'variables';
 
 body {
-  background-color: $favColor;
+  background-image: url(https://images.unsplash.com/photo-1609969194237-495892711955?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background-size: cover;
+}
+
+.navBar {
+  font-size: 2rem;
+}
+
+header.h1 {
+  color: white;
 }
 
 div.playerContainer {
@@ -27,6 +36,6 @@ div.playerContainer {
 }
 
 .profileImage {
+  object-fit: fit;
   border-radius: 50%;
-  object-fit: fill;
 }
