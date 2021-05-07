@@ -1,9 +1,66 @@
 # Sports Roster
 
-You can make your favorite basball team using Sports Roster.
-Please login and add your favorite people/animal to your favorite sports team.
+Sports Roster let you pick your favorite sports team. Add any person/animals to your team and make the best team ever!
+User can login to the application and view their team without anyone else peaking on your team.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/99ee2be4-5b38-4656-a080-c0b9a87edd5d/deploy-status)](https://app.netlify.com/sites/compassionate-curran-e86617/deploys)
 
 Deployed site:
 https://cs-sports-roster.netlify.app/
+
+
+## Screenshot
+
+Page Load - Sign in with Google Button
+***
+<img src='./src/assets/sportsroster.png' width='800px'>
+
+User views after logged in
+***
+<img src='./src/assets/side.png' width='800px'>
+
+## Technologies used
+HTML / SCSS / JavaScript / React / Reactstrap
+
+## Loom Video
+
+
+## Code Snippet
+```
+export default function Team({ user, player, setPlayer }) {
+  const [showButton, setShowButton] = useState(false);
+  const handleClick = () => {
+    setShowButton((prevState) => !prevState);
+  };
+
+  return (
+    <main>
+      <section className="header">
+      <header className="h1">{user.fullName}&apos;s Team page</header>
+      { !showButton
+        ? <Button color='info' onClick={handleClick}>Add Player</Button>
+        : <div>
+        <Button color='info' onClick={handleClick}>Are you done yet?</Button>
+          <TeamForm setPlayer={setPlayer} user={user}/>
+        </div>
+        }
+      </section>
+      <section className="container">
+        <div className='playerContainer'>
+        {player.map((playerInfo) => (
+          <PlayerCard key={playerInfo.firebaseKey}
+            firebaseKey={playerInfo.firebaseKey}
+            name={playerInfo.name}
+            position={playerInfo.position}
+            uid={playerInfo.uid}
+            imageUrl={playerInfo.imageUrl}
+            setPlayer={setPlayer}
+            user={user}
+          />
+        ))}
+        </div>
+      </section>
+    </main>
+  );
+}
+```
