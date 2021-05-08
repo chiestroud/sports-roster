@@ -1,7 +1,7 @@
 # Sports Roster
 
-Sports Roster let you pick your favorite sports team. Add any person/animals to your team and make the best team ever!
-User can login to the application and view their team without anyone else peaking on your team.
+Sports Roster lets you pick your favorite sports team. Add any person/animal to your team and you can make the best team of yours!
+You are the only one who can see your team (unless you give someone else your email address and password) so build your own great team and enjoy! 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/99ee2be4-5b38-4656-a080-c0b9a87edd5d/deploy-status)](https://app.netlify.com/sites/compassionate-curran-e86617/deploys)
 
@@ -23,7 +23,7 @@ User views after logged in
 HTML / SCSS / JavaScript / React / Reactstrap
 
 ## Loom Video
-
+https://www.loom.com/share/031e95e4082244d4ba7aa6de5bfef70a
 
 ## Code Snippet
 ```
